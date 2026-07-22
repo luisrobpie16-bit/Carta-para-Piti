@@ -18,7 +18,6 @@
   </template>
   <link rel="stylesheet" href="ds/organic-de46490a-c4d5-4780-977b-7645acb77552/styles.css">
   <script src="ds/organic-de46490a-c4d5-4780-977b-7645acb77552/ds_bundle.js"></script>
-  <script src="./image-slot.js"></script>
   <style>
     :root{
       --color-bg:#FBF1E6;
@@ -105,7 +104,8 @@
     .book-stack.dragging .book-page{transition:none !important}
     .book-page{position:absolute;inset:0;background:#F3E7C9;background-image:radial-gradient(ellipse at center,rgba(255,255,255,.25),rgba(90,60,30,.14) 100%);padding:60px 28px 56px;box-sizing:border-box;overflow:hidden;transform-origin:left center;transition:transform 1.6s cubic-bezier(.65,0,.35,1),box-shadow 1.6s;backface-visibility:hidden;box-shadow:inset 0 0 40px rgba(80,50,20,.18),2px 0 6px rgba(0,0,0,.08)}
     .book-page.flipped{transform:rotateY(-165deg);box-shadow:inset 0 0 40px rgba(80,50,20,.18),-6px 0 14px rgba(0,0,0,.25);pointer-events:none}
-    .book-photo{width:100%;margin-top:auto;border-radius:6px;border:3px solid #8B6B3D;box-shadow:0 2px 6px rgba(80,50,20,.2)}
+    .book-photo{width:100%;margin-top:auto;border-radius:6px;border:3px solid #8B6B3D;box-shadow:0 2px 6px rgba(80,50,20,.2);overflow:hidden}
+    .book-photo-img{display:block;width:100%;height:100%;object-fit:cover}
     .book-border{position:absolute;inset:14px;border:1.5px solid rgba(90,60,30,.35);pointer-events:none}
     .book-dropcap{float:left;font:400 52px var(--font-heading);color:#6b4f2e;line-height:.8;margin:2px 8px 0 0}
     .book-pagenum{position:absolute;bottom:16px;left:0;right:0;text-align:center;font:italic 400 12px var(--font-body);color:#8B6B3D;opacity:.7}
@@ -156,7 +156,7 @@
                 <div class="book-border"></div>
                 <p class="letter-p book-p"><span class="book-dropcap">N</span>o todas las páginas son fáciles de escribir, pero algunas terminan convirtiéndose en las más importantes. Esas en las que aprendemos, crecemos y descubrimos nuestra propia fuerza.</p>
                 <div class="washed book-photo" style="height:130px">
-                  <image-slot id="foto-4a-a" shape="rounded" radius="6" placeholder="Foto rectangular"></image-slot>
+                  <img class="book-photo-img" src="./image/foto-a.jpeg" alt="Foto juntos">
                 </div>
                 <p class="letter-p book-p" style="margin-top:14px">Me alegra que tu <span class="word book-word" data-word="historia">historia</span> haya seguido adelante, porque en algún momento me regaló el privilegio de formar parte de ella. De ser un pequeño detalle en tu narrativa, de verte navegar la vida con gracia y determinación.</p>
                 <svg class="page-flower" style="bottom:56px;right:14px;width:60px;height:60px;opacity:.16" viewBox="0 0 60 60">
@@ -218,7 +218,7 @@
                 <div class="book-border"></div>
                 <p class="letter-p book-p"><span class="book-dropcap">E</span>spero que los <span class="word book-word" data-word="capitulos">capítulos</span> que vienen estén llenos de <span class="word book-word" data-word="paz">paz</span>, sonrisas auténticas y personas que siempre te recuerden lo valiosa que eres. Que cada nuevo año te traiga sorpresas hermosas, amistades profundas, y la certeza de que lo mejor todavía está por escribirse.</p>
                 <div class="washed book-photo" style="height:160px">
-                  <image-slot id="foto-4a-b" shape="rounded" radius="6" placeholder="Otra foto rectangular"></image-slot>
+                  <img class="book-photo-img" src="./image/foto-b.jpeg" alt="Foto de las manos">
                 </div>
                 <svg class="page-flower" style="top:18px;left:16px;width:66px;height:50px;opacity:.15" viewBox="0 0 66 50">
                   <g fill="#8B6B3D">
